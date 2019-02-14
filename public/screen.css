@@ -77,17 +77,15 @@ header .flex {
   display: flex;
   align-items: center;
   justify-content: left;
-  margin: 2rem 1rem;
-  padding: 0.75rem 0;
 }
 
 .launches h2 {
-  text-align: left;
+  margin: 0;
+  padding: 1rem, 1rem, 0.5rem;
+  border: 0.5rem solid black;
+  background-color: #ffc107;
 }
-
-.supporting-container {
-}
-
+/*
 .info {
   width: 100;
   margin-right: 5%;
@@ -97,17 +95,38 @@ header .flex {
 .info p {
   padding: 1rem 0;
 }
-
-.mission {
-  background-color: cadetblue;
-  padding: 0.5rem 1.25rem;
-  font-weight: bold;
-  color: white;
+*/
+.supporting-container {
+  display: flex;
+  justify-content: center;
+  background-color: #d1c4e9;
+  border: 0.5rem solid red;
+  width: 100%;
+  margin-right: 5%;
+  margin-top: 10rem;
 }
 
+/*
+.mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+  color: white; 
+
+} */
+
 .footer {
-  background-color: azure;
+  background-color: #512da8;
+  border: 0.5rem solid orange;
+  color: #d1c4e9;
   padding: 2rem 2rem;
   display: flex;
   align-items: center;
+}
+
+.info .info p {
+  padding: 1rem 0;
 }
