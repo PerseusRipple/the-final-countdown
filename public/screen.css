@@ -1,3 +1,5 @@
+/* Universal Styles */
+
 :root {
   font: 16px / 1 sans-serif;
   --dark-primary-color: #512da8;
@@ -14,6 +16,13 @@ body {
   min-height: 100%;
 }
 
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Header */
+
 header {
   background: url(https://apod.nasa.gov/apod/image/1902/Helix_Campbell_960.jpg);
   background-repeat: no-repeat;
@@ -29,23 +38,35 @@ h1 {
   line-height: 1.2;
 }
 
+nav.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark-primary-color {
+  background: var(--dark-primary-color);
+}
+
 nav {
-  padding: 1rem 0;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background-color: #512da8;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
-nav div {
+.primary-text-color {
+  color: var(--main-text-color);
+}
+
+.logo {
+  width: 100%;
   display: flex;
-  align-items: center;
-}
-
-nav img {
-  height: 1.5rem;
-  margin-left: 2rem;
-  margin-right: 1rem;
+  align-items: centers;
+  padding: 0.5rem;
 }
 
 ul {
@@ -53,17 +74,16 @@ ul {
 }
 
 ul li {
+  color: pink;
   display: inline;
   padding: 1rem 1rem;
-}
-
-.truncated-menu {
-  display: none;
 }
 
 .main.banner {
   padding: 1.5rem 5rem;
   display: inline-block;
+  justify-content: center;
+  color: white;
   margin-top: 10rem;
   margin-right: -2rem;
   line-height: 1.2rem;
@@ -126,7 +146,7 @@ header .flex {
   display: flex;
   align-items: center;
 }
-
+/*
 .info .info p {
   padding: 1rem 0;
-}
+} */

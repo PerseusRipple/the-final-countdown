@@ -4,4 +4,8 @@ const main = () => {
   }
 }
 
+const url(https://sdg-astro-api.herokuapp.com/api/Nasa/apod)
+
+const url(https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming)
+
 document.addEventListener('DOMContentLoaded', main)
