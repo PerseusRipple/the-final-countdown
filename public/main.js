@@ -18,14 +18,23 @@ const getPicture = () => {
   let picture = 'https://sdg-astro-api.herokuapp.com/api/Nasa/apod'
 
   fetch(picture)
-    .then(resp => resp.json())
+    .then(resp => {
+      return resp.json()
+    })
+
     .then(data => {
-      console.log(data)
+      // console.log(data) //
+      document.getElementById('hero-image').style.backgroundImage = `url(${
+        data.hdUrl
+      })`
+
+      /*  
       let nasaImage = document.createElement('img')
       nasaImage.src = data.url
+      
       let heroImage = document.querySelector('.hero-image')
       heroImage.appendChild(nasaImage)
+    ) */
     })
 }
-
 document.addEventListener('DOMContentLoaded', main)
