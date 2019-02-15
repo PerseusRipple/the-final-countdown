@@ -23,63 +23,57 @@ body {
 
 /* Header */
 
-header {
-  background: url(https://apod.nasa.gov/apod/image/1902/Helix_Campbell_960.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-top: 1rem;
-  height: 30rem;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-nav.menu {
-  display: flex;
-  justify-content: space-between;
-}
-
 .dark-primary-color {
   background: var(--dark-primary-color);
-}
-
-nav {
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  background-color: #512da8;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.primary-text-color {
-  color: var(--main-text-color);
+  /* height: 5rem; */
 }
 
 .logo {
   width: 100%;
   display: flex;
   align-items: centers;
-  padding: 0.5rem;
+  padding: 0.5%;
+}
+
+a.text-primary-color {
+  display: flex;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav {
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 ul {
+  min-width: 10rem;
+  display: flex;
   margin-right: 1rem;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-ul li {
-  color: pink;
+li {
   display: inline;
-  padding: 1rem 1rem;
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 1rem;
+  margin: 0.5rem;
 }
 
-.main.banner {
+.menu li {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*
+.main.banner 
   padding: 1.5rem 5rem;
   display: inline-block;
   justify-content: center;
@@ -87,14 +81,38 @@ ul li {
   margin-top: 10rem;
   margin-right: -2rem;
   line-height: 1.2rem;
+} */
+
+.hero-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header .flex {
-  justify-content: flex-end;
+.hero-image h1 {
+  font-size: 2rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.image-attribute {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  color: var(--main-text-color);
+}
+
+.upcoming-launches h2 {
+  margin: 0;
+  padding: 1rem 0 1rem 0.5rem;
 }
 
 .launches {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: left;
 }
@@ -105,48 +123,106 @@ header .flex {
   border: 0.5rem solid black;
   background-color: #ffc107;
 }
-/*
-.info {
-  width: 100;
-  margin-right: 5%;
-  margin-bottom: 5rem;
+
+.accent-color {
+  background: var(--main-accent-color);
 }
 
-.info p {
-  padding: 1rem 0;
-}
-*/
 .supporting-container {
   display: flex;
   justify-content: center;
   background-color: #d1c4e9;
-  border: 0.5rem solid red;
   width: 100%;
   margin-right: 5%;
   margin-top: 10rem;
 }
 
-/*
-.mission {
+.supporting-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1.25rem;
-  font-weight: bold;
-  color: white; 
+  font-size: 1.2rem;
+}
 
-} */
+.light-primary-color {
+  background: #d1c4e9;
+}
+
+.left.arrow {
+  border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.right.arrow {
+  border-radius: 1rem 0rem 0rem 1rem;
+}
+
+.arrow {
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem;
+  background-color: var(--main-accent-color);
+  font-size: 1.8rem;
+}
+
+.arrow:active {
+  background-color: var(--dark-primary-color);
+}
+
+.launch-card {
+  margin: 1rem 3rem;
+  padding: 0 1rem 0.5rem 1rem;
+  background-color: #ededed;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.launch-card h3 {
+  text-align: center;
+}
+
+.launch-card svg {
+  margin-right: 0.5rem;
+}
+
+.launch-card main {
+  padding-bottom: 0.88rem;
+  border-bottom: darkgray 1px solid;
+}
+
+.launch-card .location,
+.launch-card .countdown {
+  padding-top: 0.88rem;
+  padding-bottom: 0.88rem;
+  border-bottom: darkgray 1px solid;
+}
+
+.launch-card .location {
+  border: none;
+}
+
+.mission-statement h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.mission-statement p {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .footer {
   background-color: #512da8;
-  border: 0.5rem solid orange;
   color: #d1c4e9;
-  padding: 2rem 2rem;
+  height: 5rem;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
-/*
-.info .info p {
-  padding: 1rem 0;
-} */

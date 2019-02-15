@@ -1,11 +1,31 @@
+// fetch(API_URL)
+// .then (resp => resp.json())
+// .then(img => {
+//   hero_image.image = image
+//   hero_image.render()
+// })
+
+// const url(https://sdg-astro-api.herokuapp.com/api/Nasa/apod)
+
+// const url(https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming)
+
 const main = () => {
-  if (document.querySelector('h1.hello-world')) {
-    document.querySelector('h1.hello-world').textContent = 'Hello, World!'
-  }
+  getPicture()
+  // getLaunches()
 }
 
-const url(https://sdg-astro-api.herokuapp.com/api/Nasa/apod)
+const getPicture = () => {
+  let picture = 'https://sdg-astro-api.herokuapp.com/api/Nasa/apod'
 
-const url(https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming)
+  fetch(picture)
+    .then(resp => resp.json())
+    .then(data => {
+      console.log(data)
+      let nasaImage = document.createElement('img')
+      nasaImage.src = data.url
+      let heroImage = document.querySelector('.hero-image')
+      heroImage.appendChild(nasaImage)
+    })
+}
 
 document.addEventListener('DOMContentLoaded', main)
