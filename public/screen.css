@@ -69,6 +69,7 @@ li {
   color: #ffffff;
   text-decoration: underline;
   font-size: 1rem;
+  /*padding: 1.25rem; */
   margin: 0.5rem;
 }
 
@@ -137,15 +138,6 @@ main {
   background: var(--main-accent-color);
 }
 
-/*.supporting-container {
-  display: flex;
-  justify-content: center;
-  background-color: #d1c4e9;
-  width: 100%;
-  margin-right: 5%;
-  margin-top: 10rem;
-} */
-
 /* Supporting Container */
 
 .supporting-container {
@@ -156,6 +148,7 @@ main {
   background-color: #d1c4e9;
   font-size: 1.2rem;
 }
+
 */ .light-primary-color {
   background: #d1c4e9;
 }
@@ -187,36 +180,37 @@ main {
 
 /* Launch Card */
 
-.launch-card {
-  margin: 1rem 5rem;
+#launch-card {
+  margin: 1rem 3rem;
   padding: 0 1rem 0.5rem 1rem;
   background-color: #ededed;
   border-radius: 0.5rem;
+  /*padding-bottom: 0.75rem; */
+  border-bottom: darkgray 1px solid;
   width: 100%;
 }
 
-.launch-card h3 {
+#launch-card h3 {
   text-align: center;
 }
+h3 {
+  display: block;
+  font-size: 1.2rem;
+}
 
-.launch-card svg {
+#launch-card svg {
   margin-right: 0.5rem;
 }
 
-.launch-card main {
-  padding-bottom: 0.75rem;
-  border-bottom: darkgray 1px solid;
-}
-
-.launch-card .information,
-.launch-card .countdown,
-.launch-card .location {
+#launch-card .information,
+#launch-card .countdown,
+#launch-card .location {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   border-bottom: darkgray 1px solid;
 }
 
-.launch-card .location {
+#launch-card .location {
   border: none;
 }
 

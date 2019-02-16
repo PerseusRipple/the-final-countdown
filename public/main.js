@@ -1,17 +1,6 @@
-// fetch(API_URL)
-// .then (resp => resp.json())
-// .then(img => {
-//   hero_image.image = image
-//   hero_image.render()
-// })
-
-// const url(https://sdg-astro-api.herokuapp.com/api/Nasa/apod)
-
-// const url(https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming)
-
 const main = () => {
   getPicture()
-  // getLaunches()
+  getLaunch()
 }
 
 const getPicture = () => {
@@ -27,14 +16,23 @@ const getPicture = () => {
       document.getElementById('hero-image').style.backgroundImage = `url(${
         data.hdUrl
       })`
-
-      /*  
-      let nasaImage = document.createElement('img')
-      nasaImage.src = data.url
-      
-      let heroImage = document.querySelector('.hero-image')
-      heroImage.appendChild(nasaImage)
-    ) */
     })
 }
+
+const getLaunch = () => {
+  let launch = `https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming`
+
+  fetch(launch)
+    .then(resp => {
+      return resp.json()
+    })
+
+    .then(data => {
+      console.log(data)
+      document.getElementsByClassName('launches-selector').textContent = `url(${
+        data.hdUrl
+      })`
+    })
+}
+
 document.addEventListener('DOMContentLoaded', main)
