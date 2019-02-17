@@ -42,6 +42,16 @@
     _missionName.appendChild(document.createTextNode(this.data.mission_name))
     return _missionName
     }
+
+/*
+const buildHeader = () => {
+  const _missionName = document.querySelector('h3')
+
+  _missionName.appendChild(document.addText(this.data.mission_name))
+  return _missionName
+}
+
+
     const launches = ['mission_name', 'details', 'launch_date_local', 'launch_site']
     launches.forEach(launches => console.log(launches)) 
 
@@ -59,4 +69,20 @@
             data.hdUrl
           })`
         })
-    } */
+  
+        
+        const getCopyright = () => {
+  let copyright = 'https://sdg-astro-api.herokuapp.com/api/Nasa/apod/copyright'
+
+  fetch(copyright)
+  .then(resp => {
+    return resp.json()
+  })
+
+  .then(data => {
+    console.log(data)
+    document.getElementById('#text.image-attribute').attributes = `url(${data.copyright
+  })`
+
+  () => page.pageWillLoad()
+*/
