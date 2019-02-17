@@ -1,6 +1,9 @@
+const API_URL =
+  'https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming'
+
 const main = () => {
   getPicture()
-  getLaunch()
+  buildHeader()
 }
 
 const getPicture = () => {
@@ -19,20 +22,20 @@ const getPicture = () => {
     })
 }
 
-const getLaunch = () => {
-  let launch = `https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming`
+fetch('https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming')
+  .then(resp => {
+    return resp.json()
+  })
 
-  fetch(launch)
-    .then(resp => {
-      return resp.json()
-    })
+  .then(list => {
+    console.log(list)
+  })
 
-    .then(data => {
-      console.log(data)
-      document.getElementsByClassName('launches-selector').textContent = `url(${
-        data.hdUrl
-      })`
-    })
+const buildHeader = () => {
+  const _missionName = document.querySelector('h3')
+
+  _missionName.appendChild(document.addText(this.data.mission_name))
+  return _missionName
 }
 
 document.addEventListener('DOMContentLoaded', main)

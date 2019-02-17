@@ -216,20 +216,27 @@ h3 {
 
 /* Mission Statement */
 
-.mission-statement h2 {
+.supporting-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
 }
 
-.mission-statement p {
+.mission-statement {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
 }
+
+.mission-statement p {
+  display: block;
+  margin-block-start: 0.88em;
+  margin-block-end: 0.88em;
+  font-size: 1.5rem;
+}
+
 /* Footer */
 
 footer {

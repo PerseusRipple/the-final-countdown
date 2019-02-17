@@ -17,6 +17,7 @@
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 5000,
+          })
 /*
           .then(data => {
             document.getElementById('launch-card').textContent = "launch"
@@ -33,4 +34,29 @@
 
 // const url(https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming)
 /*const API_URL =
-  'https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming' */
+  'https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming' 
+  
+  
+
+  // buildHeader = () => {
+    _missionName.appendChild(document.createTextNode(this.data.mission_name))
+    return _missionName
+    }
+    const launches = ['mission_name', 'details', 'launch_date_local', 'launch_site']
+    launches.forEach(launches => console.log(launches)) 
+
+    const getLaunch = () => {
+      let launch = `https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming`
+    
+      fetch(launch)
+        .then(resp => {
+          return resp.json()
+        })
+    
+        .then(data => {
+          console.log(data)
+          document.getElementsByClassName('.launch-card').textContent = `url(${
+            data.hdUrl
+          })`
+        })
+    } */
