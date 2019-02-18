@@ -181,11 +181,11 @@ main {
 /* Launch Card */
 
 #launch-card {
-  margin: 5rem 2rem;
+  margin: 5rem 3rem;
   padding: 0 1rem 0.5rem 1rem;
   background-color: #ededed;
   border-radius: 0.5rem;
-  /*padding-bottom: 0.75rem; */
+  padding-bottom: 0.75rem;
   border-bottom: darkgray 1px solid;
   width: 100%;
 }
@@ -212,7 +212,11 @@ h3 {
 }
 
 #launch-card .location {
-  border: none;
+  border-bottom: none;
+}
+
+.mission-name {
+  border-bottom: darkgray 1px solid;
 }
 
 /* Mission Statement */

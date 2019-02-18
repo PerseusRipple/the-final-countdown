@@ -19,7 +19,12 @@ const getPicture = () => {
       })`
       let copyright = data.copyright
 
-      document.querySelector('.copyright').textContent = copyright
+      if (data.copyright) {
+        document.querySelector('.copyright').textContent = copyright
+      } else {
+        document.querySelector('.copyright').textContent = 'No copyright.'
+      }
+
       document.querySelector('.image-title').textContent = data.title
     })
 }
@@ -64,7 +69,50 @@ const createHeader = () => {
         document.getElementsByClassName('.information')
 
         let description = data.details
-        document.querySelector('.information').textContent = data[1].details
+
+        if (data.details) {
+          document.querySelector('.information').textContent = data[0].details
+        } else {
+          document.querySelector('.information').textContent = 'No details yet.'
+        }
+      })
+  }
+
+  createCountdown = () => {
+    let date =
+      'https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming'
+
+    fetch(date)
+      .then(resp => {
+        return resp.json()
+      })
+
+      .then(data => {
+        console.log(data)
+        document.getElementsByClassName('.countdown')
+
+        let counter = data.launch_date_utc
+        document.querySelector('.countdown').textContent =
+          data[0].launch_date_utc
+      })
+  }
+
+  createLocation = () => {
+    let site =
+      'https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming'
+
+    fetch(site)
+      .then(resp => {
+        return resp.json()
+      })
+
+      .then(data => {
+        console.log(data)
+        document.querySelector('.location')
+
+        let location = data.launch_site.site_name_long
+        document.querySelector('location').textContent =
+          data[0].launch_site.launch_name_long
       })
   }
 }
