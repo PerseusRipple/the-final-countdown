@@ -1,6 +1,7 @@
 const main = () => {
   getPicture()
   createHeader()
+  createDescription()
 }
 
 const getPicture = () => {
@@ -49,7 +50,7 @@ const createHeader = () => {
       document.querySelector('#shuttle').textContent = data[0].mission_name
     })
 
-  createDescription => {
+  createDescription = () => {
     let details =
       'https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming'
 
@@ -59,11 +60,11 @@ const createHeader = () => {
       })
 
       .then(data => {
-        console.log(info)
-        document.getElementByClassName('.information')
+        console.log(data)
+        document.getElementsByClassName('.information')
 
         let description = data.details
-        document.querySelector('.information').textContent = data[0].details
+        document.querySelector('.information').textContent = data[1].details
       })
   }
 }
