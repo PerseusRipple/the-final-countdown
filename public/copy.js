@@ -85,4 +85,28 @@ const buildHeader = () => {
   })`
 
   () => page.pageWillLoad()
-*/
+
+  if copyright === null {
+      document.querySelector('.copyright').textContent = copyright + 'none'
+       } else if {
+
+        /*_missionName
+
+_missionMain
+
+_missionLocation
+
+createCountDown
+
+const page = newPage()
+
+document
+  .querySelector('prev')
+  .addEventListener('click', () => page.goToPrevLaunch())
+document
+  .querySelector('next')
+  .addEventListener('click', () => page.gotToNextLaunch()) */
+
+/*const API_URL =
+  'https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming' 
+  */

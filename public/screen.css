@@ -181,7 +181,7 @@ main {
 /* Launch Card */
 
 #launch-card {
-  margin: 1rem 3rem;
+  margin: 5rem 2rem;
   padding: 0 1rem 0.5rem 1rem;
   background-color: #ededed;
   border-radius: 0.5rem;
@@ -193,6 +193,7 @@ main {
 #launch-card h3 {
   text-align: center;
 }
+
 h3 {
   display: block;
   font-size: 1.2rem;

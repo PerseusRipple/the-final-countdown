@@ -1,6 +1,3 @@
-/*const API_URL =
-  'https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming' */
-
 const main = () => {
   getPicture()
   createHeader()
@@ -19,6 +16,10 @@ const getPicture = () => {
       document.getElementById('hero-image').style.backgroundImage = `url(${
         data.hdUrl
       })`
+      let copyright = data.copyright
+
+      document.querySelector('.copyright').textContent = copyright
+      document.querySelector('.image-title').textContent = data.title
     })
 }
 
@@ -32,11 +33,10 @@ fetch('https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming')
   })
 
 const createHeader = () => {
-  let header =
+  let missionName =
     'https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming'
-  let _missionName = header
 
-  fetch(header)
+  fetch(missionName)
     .then(resp => {
       return resp.json()
     })
@@ -44,29 +44,28 @@ const createHeader = () => {
     .then(data => {
       console.log(data)
       document.getElementById('shuttle')
+
+      let header = data.mission_name
+      document.querySelector('#shuttle').textContent = data[0].mission_name
     })
 
-  document.appendChild(this.icon('.fa-space-shuttle'))
+  createDescription => {
+    let details =
+      'https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming'
 
-  document.appendChild(document.createText(this.data.mission_name))
-  return _missionName
+    fetch(details)
+      .then(resp => {
+        return resp.json()
+      })
+
+      .then(data => {
+        console.log(info)
+        document.getElementByClassName('.information')
+
+        let description = data.details
+        document.querySelector('.information').textContent = data[0].details
+      })
+  }
 }
-
-/*_missionName
-
-_missionMain
-
-_missionLocation
-
-createCountDown
-
-const page = newPage()
-
-document
-  .querySelector('prev')
-  .addEventListener('click', () => page.goToPrevLaunch())
-document
-  .querySelector('next')
-  .addEventListener('click', () => page.gotToNextLaunch()) */
 
 document.addEventListener('DOMContentLoaded', main)
