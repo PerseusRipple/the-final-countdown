@@ -41,7 +41,7 @@ fetch('https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming')
 const createHeader = () => {
   let missionName =
     'https://sdg-astro-api.herokuapp.com/api/SpaceX/launches/upcoming'
-
+  let icon = 'fas fa-space-shuttle'
   fetch(missionName)
     .then(resp => {
       return resp.json()
@@ -73,7 +73,8 @@ const createHeader = () => {
         if (data.details) {
           document.querySelector('.information').textContent = data[0].details
         } else {
-          document.querySelector('.information').textContent = 'No details yet.'
+          document.querySelector('.information').textContent =
+            'No details available yet.'
         }
       })
   }
@@ -111,7 +112,7 @@ const createHeader = () => {
         document.querySelector('.location')
 
         let location = data.launch_site.site_name_long
-        document.querySelector('location').textContent =
+        document.querySelector('.location').textContent =
           data[0].launch_site.launch_name_long
       })
   }

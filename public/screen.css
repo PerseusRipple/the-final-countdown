@@ -209,6 +209,7 @@ h3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   border-bottom: darkgray 1px solid;
+  text-align: center;
 }
 
 #launch-card .location {
